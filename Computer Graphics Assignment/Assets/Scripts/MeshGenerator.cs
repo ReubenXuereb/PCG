@@ -31,12 +31,12 @@ public class MeshGenerator
     public void generateTrueTriangle(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 normal, int meshCount)
     {
 
-        //4. Getting index of each vertex within the list of vertices
+        //Getting index of each vertex within the list of vertices
         int p0PosInList = vertices.Count;
         int p1PosInList = vertices.Count + 1;
         int p2IPosInList = vertices.Count + 2;
 
-        //5. Add the index of each vertex to the indices
+        // Add the index of each vertex to the indices
         indices.Add(p0PosInList);
         indices.Add(p1PosInList);
         indices.Add(p2IPosInList);
@@ -44,17 +44,17 @@ public class MeshGenerator
         submeshIndices[meshCount].Add(p1PosInList);
         submeshIndices[meshCount].Add(p2IPosInList);
 
-        //1. Add each point to our vertices List
+        //Add each point to our vertices List
         vertices.Add(p0);
         vertices.Add(p1);
         vertices.Add(p2);
 
-        //2. Add normals to our normals List
+        //Add normals to our normals List
         normals.Add(normal);
         normals.Add(normal);
         normals.Add(normal);
 
-        //3. Add each UV coordinates to our uvs List
+        //Add each UV coordinates to our uvs List
         uvs.Add(new Vector2(0, 0));
         uvs.Add(new Vector2(0, 1));
         uvs.Add(new Vector2(1, 1));

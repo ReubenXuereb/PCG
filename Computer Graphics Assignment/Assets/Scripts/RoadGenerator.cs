@@ -7,44 +7,31 @@ using UnityEngine;
 [RequireComponent(typeof(MeshCollider))]
 public class RoadGenerator : MonoBehaviour
 {
-    [SerializeField]
-    public float radius = 30f; // this defines the radius of the path
+    [SerializeField] public float radius = 30f; //this defines the radius of the path
 
-    [SerializeField]
-    private float segments = 300f;
+    [SerializeField] private float segments = 300f;
 
-    [SerializeField]
-    private float lineWidth = 0.3f; // middle white line road marker
+    [SerializeField] private float lineWidth = 0.3f; //this controls the width of the middle white line 
 
-    [SerializeField]
-    private float roadWidth = 8f; // width of the road on each side of the line
+    [SerializeField] private float roadWidth = 8f; //this controls the width of the track on each side of the line
 
-    [SerializeField]
-    private float edgeWidth = 1f; // widht of our road barrier at the edge of our road
+    [SerializeField] private float edgeWidth = 1f; //widht of the track barrier at the edge of the track
 
-    [SerializeField]
-    private float edgeHeight = 1f;
+    [SerializeField] private float edgeHeight = 1f;
 
-    [SerializeField]
-    private int meshSize = 6;
+    [SerializeField] private int meshSize = 6;
 
-    [SerializeField]
-    private float wavyness = 5f;
+    [SerializeField] private float wavyness = 5f;
 
-    [SerializeField]
-    private float waveScale = 0.1f;
+    [SerializeField] private float waveScale = 0.1f;
 
-    [SerializeField]
-    private Vector2 waveOffset;
+    [SerializeField] private Vector2 waveOffset;
 
-    [SerializeField]
-    private Vector2 waveStep = new Vector2(0.01f, 0.01f);
+    [SerializeField] private Vector2 waveStep = new Vector2(0.01f, 0.01f);
 
-    [SerializeField]
-    private bool stripeCheck = true;
+    [SerializeField] private bool stripeCheck = true;
 
-    [SerializeField]
-    private GameObject car;
+    [SerializeField] private GameObject car;
 
     MeshGenerator mg;
 
@@ -67,8 +54,8 @@ public class RoadGenerator : MonoBehaviour
         mg = new MeshGenerator(meshSize);
 
 
-        //1. Divide the circular race track into segments denoted in degrees and each point is defined by each segment
-        //Create the points and store them in a list. This is to create different shapes for the track
+        //Divide the circular race track into segments denoted in degrees and each point is defined by each segment
+        //Creating the points and storing them in a list. This is to create different shapes for the track
         float segmentDegrees = 360f / segments;
 
         List<Vector3> points = new List<Vector3>();
@@ -97,7 +84,7 @@ public class RoadGenerator : MonoBehaviour
             points[i] += centreDirection * noise * smoothJoining;
         }
 
-        //2. function to define the path - the path is defined by each segment
+        //this function is to define the path. The path is defined by each segment
         for (int i = 1; i < points.Count + 1; i++)
         {
             Vector3 pPrev = points[i - 1];
@@ -120,9 +107,7 @@ public class RoadGenerator : MonoBehaviour
         mr.materials = materialList.ToArray();
     }
 
-    //3. This method will used to create the different segments for each segment we are going to draw the road marker 
-    //   (i.e. white line in the middle), draw the road on each side of the line, draw the edges - all these are going 
-    //   to be placed in different positions
+    //This method functionality is to create the different segments for each segment  that will form the track
     private void generateRoad(MeshGenerator mg, Vector3 pPrev, Vector3 pCurr, Vector3 pNext)
     {
         //Road Line
@@ -167,14 +152,14 @@ public class RoadGenerator : MonoBehaviour
 
     }
 
-    //4. Create each quad
+    //Creating each quad
     private void generateRoadQuad(MeshGenerator mg, Vector3 pPrev, Vector3 pCurr, Vector3 pNext,
                               Vector3 offset, Vector3 targetOffset, int submesh)
     {
         Vector3 forward = (pNext - pCurr).normalized;
         Vector3 forwardPrev = (pCurr - pPrev).normalized;
 
-        //Build Outer Track
+        //Building the Outer Track
         Quaternion perp = Quaternion.LookRotation(Vector3.Cross(forward, Vector3.up));
         Quaternion perpPrev = Quaternion.LookRotation(Vector3.Cross(forwardPrev, Vector3.up));
 
@@ -187,7 +172,7 @@ public class RoadGenerator : MonoBehaviour
         mg.generateTriangle(topLeft, topRight, bottomLeft, submesh);
         mg.generateTriangle(topRight,bottomRight,bottomLeft, submesh);
 
-        //Build Inner Track
+        //Building the Inner Track
         perp = Quaternion.LookRotation(Vector3.Cross(-forward, Vector3.up));
         perpPrev = Quaternion.LookRotation(Vector3.Cross(-forwardPrev, Vector3.up));
 

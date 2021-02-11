@@ -16,14 +16,14 @@ public class PyramidGenerator : MonoBehaviour
     MeshFilter mf;
 
     MeshRenderer mr;
-    // Start is called before the first frame update
+  
     void Start()
     {
         mf = this.GetComponent<MeshFilter>();
         mr = this.GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
 

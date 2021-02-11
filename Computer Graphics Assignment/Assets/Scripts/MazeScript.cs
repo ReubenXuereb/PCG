@@ -17,6 +17,7 @@ public class MazeScript : MonoBehaviour
         Vertical();
     }
 
+    //placment of cubes to form the border
     void Borders()
     {
         var border1 = new GameObject().AddComponent<CubeGenerator>();
@@ -62,6 +63,7 @@ public class MazeScript : MonoBehaviour
         border6.name = "Border 6";
     }
 
+    //placment of cubes to form the horizontal walls
     void Horizontals()
     {
         var horizontal1 = new GameObject().AddComponent<CubeGenerator>();
@@ -95,7 +97,7 @@ public class MazeScript : MonoBehaviour
 
     }
 
-
+    //placment of cubes to form the verical walls
     void Vertical()
     {
         var vertical1 = new GameObject().AddComponent<CubeGenerator>();

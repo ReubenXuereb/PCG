@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\TriangleGenerator.cs" />
     <Compile Include="Assets\Scripts\PathMaker.cs" />
     <Compile Include="Assets\Scripts\MazeScript.cs" />
+    <Compile Include="Assets\Scripts\TerrainGeneratorForFirstTask.cs" />
+    <Compile Include="Assets\Scripts\TerrainGeneratorForSecondTask.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Scenes\Task2\READ ME!!!.txt" />

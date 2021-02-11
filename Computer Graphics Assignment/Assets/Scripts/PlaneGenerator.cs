@@ -43,7 +43,7 @@ public class PlaneGenerator : MonoBehaviour
 
         int meshCount = 0;
 
-        //Create the quads
+        //Creating the quads
         for (int x = 0; x < width - 1; x++)
         {
             for (int y = 0; y < height - 1; y++)
@@ -53,7 +53,7 @@ public class PlaneGenerator : MonoBehaviour
                 Vector3 tr = points[x, y + 1];
                 Vector3 tl = points[x + 1, y + 1];
 
-                //create 2 triangles that make up a quad
+                //creating 2 triangles that make up a quad
                 mg.generateTriangle(bl, tr, tl, meshCount % 6);
                 mg.generateTriangle(bl, br, tr, meshCount % 6);
             }

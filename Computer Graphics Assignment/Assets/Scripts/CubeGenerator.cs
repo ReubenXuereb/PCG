@@ -17,7 +17,7 @@ public class CubeGenerator : MonoBehaviour
 
     MeshRenderer mr;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         size = Vector3.one;
@@ -25,7 +25,7 @@ public class CubeGenerator : MonoBehaviour
         mr = this.GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         mg = new MeshGenerator(6);

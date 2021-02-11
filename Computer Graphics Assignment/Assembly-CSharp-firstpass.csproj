@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainScript.cs" />
     <Compile Include="Assets\Plugins\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
@@ -97,8 +99,11 @@
     <Compile Include="Assets\Plugins\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\FireLight.cs" />
     <Compile Include="Assets\Plugins\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainCollision.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
     <Compile Include="Assets\Plugins\3rdPerson+Fly\Scripts\LevelScripts\ControlsTutorial.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Prefab\BaseRainScript.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
@@ -120,19 +125,14 @@
     <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Utility\FPSCounter.cs" />
     <Compile Include="Assets\Plugins\3rdPerson+Fly\Scripts\LevelScripts\HintManagement.cs" />
     <Compile Include="Assets\Plugins\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
+    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScript2D.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Utility\FOVKick.cs" />
     <Compile Include="Assets\Plugins\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScript.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainScript.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainCollision.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Prefab\BaseRainScript.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Prefab\RainScript2D.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
-    <Compile Include="Assets\Plugins\RainMaker\Demo\DemoScript2D.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Plugins\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
