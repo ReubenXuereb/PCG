@@ -40,7 +40,6 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField] private bool addTree = false;
 
     [SerializeField] private bool addWater = false;
-    [SerializeField] private bool removeWater = false;
 
     [SerializeField] private bool addCloud = false;
 
@@ -159,11 +158,6 @@ public class TerrainGenerator : MonoBehaviour
         if (addWater)
         {
             generateWater();
-        }
-
-        if (removeWater)
-        {
-            Destroy(GameObject.Find("water"));
         }
 
         if (addCloud == true)

@@ -40,7 +40,6 @@ public class TerrainGeneratorForSecondTask : MonoBehaviour
     [SerializeField] private bool addTree = false;
 
     [SerializeField] private bool addWater = false;
-    [SerializeField] private bool removeWater = false;
 
     [SerializeField] private bool addCloud = false;
 
@@ -95,7 +94,6 @@ public class TerrainGeneratorForSecondTask : MonoBehaviour
     [SerializeField] private float waterHeight = 0.2f;
 
     [SerializeField] private GameObject cloud;
-        
 
     [SerializeField] private GameObject rain;
 
@@ -165,11 +163,6 @@ public class TerrainGeneratorForSecondTask : MonoBehaviour
         if (addWater)
         {
             generateWater();
-        }
-
-        if (removeWater)
-        {
-            Destroy(GameObject.Find("water"));
         }
 
         if (addCloud == true)
@@ -385,7 +378,7 @@ public class TerrainGeneratorForSecondTask : MonoBehaviour
                 cloudGameObject = Instantiate(cloud, this.transform.position, this.transform.rotation);
                 cloudGameObject.transform.position = new Vector3(Random.Range(0, 2000), 1390, Random.Range(0, 2000));
                 cloudGameObject.name = "cloud";
-                cloud.transform.parent = CloudHolder.transform;
+                //cloud.transform.parent = CloudHolder.transform;
             }
         }     
     }

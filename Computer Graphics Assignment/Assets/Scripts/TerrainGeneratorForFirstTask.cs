@@ -39,16 +39,6 @@ public class TerrainGeneratorForFirstTask : MonoBehaviour
 
     [SerializeField] private bool addTree = false;
 
-    [SerializeField] private bool addWater = false;
-    [SerializeField] private bool removeWater = false;
-
-    [SerializeField] private bool addCloud = false;
-
-    [SerializeField] private bool addRain = false;
-
-
-
-
     //variables for generating terrain using random values
     [SerializeField]
     private float minRandomHeightRange = 0f;
@@ -315,6 +305,5 @@ public class TerrainGeneratorForFirstTask : MonoBehaviour
         }
 
         terrainData.treeInstances = treeInstanceList.ToArray();
-
     }
 }
